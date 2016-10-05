@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styling.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src='drawing.js'></script>
+</head>
+
+<body>
+
+  <div class='column' id='left-column'>
+    <canvas id='canvas'> </canvas>
+  </div>
+
+  <div class='column' id='right-column'>
+    <div class='params-btn-block'>
+      <h2>Inner Circle Size (percentage of outer circle)</h2>
+      <button class='decrement' param='size-offset'> - </button>
+      <input id='size-offset' type="number" min='1' value='30' step='1'>
+      <button class='increment' param='size-offset'> + </button>
+    </div>
+
+    <div class='params-btn-block'>
+      <h2>Inner Circle Offset (percentage of outer circle radius)</h2>
+      <button class='decrement' param='inner-offset'> - </button>
+      <input id='inner-offset' type="number" min='1' value='65' step='1'>
+      <button class='increment' param='inner-offset'> + </button>
+    </div>
+
+    <div class='params-btn-block'>
+      <h2>Inner Circle Spin Speed</h2>
+      <button class='decrement' param='rot-speed'> - </button>
+      <input id='rot-speed' type="number" value='-1.2' step='0.1'>
+      <button class='increment' param='rot-speed'> + </button>
+    </div>
+
+    <div class='params-btn-block'>
+      <h2>Sample Size</h2>
+      <button class='decrement' param='sample-size'> - </button>
+      <input id='sample-size' type="number" min='100' value='1000' step='10'>
+      <button class='increment' param='sample-size'> + </button>
+    </div>
+
+    <div class='params-btn-block'>
+      <h2>Background Color</h2>
+      <input id='background-color' type='color' value='#3355cc' />
+    </div>
+
+    <button id='draw'> Draw </button>
+  </div>
+
+</body>
+
+</html>
